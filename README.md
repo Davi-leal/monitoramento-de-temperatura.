@@ -25,8 +25,26 @@ O objetivo deste projeto é desenvolver um software em C capaz de monitorar temp
 ## 4. Estruturas de Repetição Utilizadas
 No projeto foi utilizada a estrutura **`do...while`** combinada com um laço **`while`** auxiliar para limpeza de *buffer*:
 
-* **`do...while`:** Utilizado no laço principal de captura de dados. A escolha se justifica pelo fato de que o sistema precisa obrigatoriamente executar a leitura do teclado pelo menos **uma vez** antes de verificar se a condição de parada (alerta atingido 3 vezes) foi preenchida.
+* **`do...while`:** Utilizado no laço principal de captura de dados. A escolha se justifica pelo fato de que o sistema precisa obrigatoriamente executar a leitura do teclado pelo menos **uma vez** antes de
+* verificar se a condição de parada (alerta atingido 3 vezes) foi preenchida.
 * **`while` (`while (getchar() != '\n');`):** Utilizado de forma pontual após falhas de leitura no `scanf` para consumir e descartar todos os caracteres inválidos do *buffer* até encontrar a quebra de linha (`\n`), prevenindo *loops* infinitos.
+* ## 5. Como Executar
+
+### Pré-requisitos
+* Compilador GCC instalado na máquina.
+
+### Compilação e Execução
+Abra o terminal no diretório do projeto e execute os comandos:
+
+```bash
+# Compilar o código fonte
+gcc monitoramento.c -o monitoramento
+
+# Executar no Linux/macOS
+./monitoramento
+
+# Executar no Windows (CMD/PowerShell)
+.\monitoramento.exe
 
 ---
 
